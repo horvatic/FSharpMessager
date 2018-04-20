@@ -6,12 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="View\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="View\message.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Store\MemoryStore.fs" />
     <Compile Include="Controls\Errors.fs" />
     <Compile Include="Controls\MessageControl.fs" />
     <Compile Include="Routes\Routing.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
+
+  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

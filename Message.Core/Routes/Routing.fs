@@ -21,10 +21,10 @@ let ConvertToJson v =
 let appRoute : WebPart = 
     choose [
         path "/" >=> choose [
-          GET  >=> Files.file "C:/git/Message/Message.View/index.html"
+          GET  >=> Files.file "View\index.html"
           RequestErrors.NOT_FOUND "Found no handlers" ]
         path "/message.js" >=> choose [
-          GET  >=> Files.file "C:/git/Message/Message.View/message.js"
+          GET  >=> Files.file "View\message.js"
           RequestErrors.NOT_FOUND "Found no handlers" ]
         path "/m" >=> choose [
           GET  >=> request (fun r -> CheckMessages() |> ConvertToJson)
